@@ -19,17 +19,18 @@ function scene:create(event)
     -- physics.start()
     -- physics.setGravity(0, 32)
 
-    -- Load our map
+    -- Load our map from an exported tiled JSON file
     -- local filename = event.params.map or "map/game_scene.json"
     -- local mapData = json.decodeFile(system.pathForFile(filename, system.ResourceDirectory))
-    -- local mapData = require("map.stage_1")
     -- map = tiled.new(mapData, "map")
+    
+    -- Do map scaling
     -- map.xScale, map.yScale = 1, 1
 
-    -- Implement extensions folder for the map
+    -- Implement extensions folder for the map. Used to extend functionality for various elements on the map
     -- map.extensions = "map.lib."
     
-    -- Do extensions
+    -- Do extensions. For instance, find out hero in the stage and extend the hero's functionality
     -- map:extend("hero")
     -- hero = map:findObject("hero")
     -- hero.filename = filename
@@ -37,7 +38,7 @@ function scene:create(event)
     -- Find our enemies and other items
     -- map:extend("blob", "enemy", "exit", "coin", "spikes")
 
-    -- Insert our game items in the correct back-to-front order
+    -- Finally: insert our game items in the correct back-to-front order
     -- sceneGroup:insert(map)
 end
 

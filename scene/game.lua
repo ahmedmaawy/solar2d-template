@@ -5,9 +5,6 @@ local tiled = require("com.ponywolf.ponytiled")
 local physics = require("physics")
 local json = require("json")
 
--- Variables local to scene
-local map, hero, shield, parallax
-
 -- Create a new Composer scene
 local scene = composer.newScene()
 
